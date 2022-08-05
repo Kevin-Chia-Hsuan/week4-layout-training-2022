@@ -1,0 +1,48 @@
+//自訂網頁文字大小、行高
+$font-size-custom: 1rem;
+$text-types: (
+  ss: $font-size-custom * 0.875,
+  // font-siz:14px line-height:21px
+  s: $font-size-custom * 1,
+  // font-siz:16px line-height:24px
+  m: $font-size-custom * 1.25,
+  // font-siz:20px line-height:30px
+  lg: $font-size-custom * 1.5,
+  // font-siz:24px line-height:36px
+  2lg: $font-size-custom * 2,
+  // font-siz:32px line-height:40px
+  xl: $font-size-custom * 2.25,
+  // font-siz:36px line-height:54px
+  xxl: $font-size-custom * 2,
+  // font-siz:32px line-height:48px
+  2xl: $font-size-custom * 3,
+  // font-siz:48px line-height:72px
+  3xl: $font-size-custom * 4,
+  // font-siz:64px line-height:96px
+) !default;
+
+@each $name, $font-size-custom in $text-types {
+  .text-#{$name} {
+    font-size: $font-size-custom;
+  }
+}
+@include pad {
+  @each $name, $font-size-custom in $text-types {
+    .text-md-#{$name} {
+      font-size: $font-size-custom;
+    }
+  }
+}
+@include mobile {
+  @each $name, $font-size-custom in $text-types {
+    .text-sm-#{$name} {
+      font-size: $font-size-custom;
+    }
+  }
+}
+.text-medium {
+  font-weight: 500;
+}
+.text-bold {
+  font-weight: bold;
+}

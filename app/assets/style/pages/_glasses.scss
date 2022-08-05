@@ -1,0 +1,76 @@
+.glasses-header {
+  .container {
+    max-width: 1296px;
+    margin: 0 auto;
+    @include pad {
+      padding-right: 0px;
+      padding-left: 0px;
+    }
+    @include mobile {
+      padding-right: 0px;
+      padding-left: 0px;
+    }
+  }
+}
+.tab-menu {
+  display: flex;
+  justify-content: space-between;
+  .active {
+    border-bottom: 8px solid $text-color-Tertiary;
+  }
+  li {
+    width: 100%;
+    border: 1px solid $border-color-secondary;
+    a {
+      text-align: center;
+      color: $text-color-default;
+      &:hover {
+        background: $text-hover-color-primary;
+      }
+    }
+  }
+}
+/* glasses-banner區塊 */
+.glasses-banner {
+  display: flex;
+  img {
+    @include pad {
+      height: 296px;
+    }
+    @include mobile {
+      height: 136px;
+    }
+  }
+}
+.glasses-product {
+  text-align: center;
+  h2 {
+    font-size: 42px;
+    @include mobile {
+      font-size: 24px;
+    }
+  }
+}
+.glasses-product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .tab01 {
+    width: 24%;
+    @include pad {
+      width: 48%;
+    }
+    @include mobile {
+      width: 100%;
+    }
+  }
+  .tab02 {
+    width: 32%;
+    @include pad {
+      width: 48%;
+    }
+    @include mobile {
+      width: 100%;
+    }
+  }
+}

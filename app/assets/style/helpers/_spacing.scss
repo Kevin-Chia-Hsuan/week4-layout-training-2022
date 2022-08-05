@@ -1,0 +1,118 @@
+//自訂網頁padding、margin距離
+$spacer: 1rem;
+$spacer-types: (
+  0: 0,
+  1: $spacer * 0.25,
+  // 4px
+  2: $spacer * 0.5,
+  // 8px
+  3: $spacer * 0.75,
+  // 12px
+  4: $spacer * 1,
+  // 16px
+  5: $spacer * 1.5,
+  // 24px
+  6: $spacer * 2,
+  // 32px
+  7: $spacer * 2.5,
+  // 40px
+  8: $spacer * 3,
+  //48px
+  9: $spacer * 4,
+  // 64px
+  10: $spacer * 5,
+  // 80px
+  11: $spacer * 6,
+  // 96px
+) !default;
+
+@each $name, $spacer in $spacer-types {
+  .m-#{$name} {
+    margin: $spacer;
+  }
+  .mt-#{$name} {
+    margin-top: $spacer;
+  }
+  .mb-#{$name} {
+    margin-bottom: $spacer;
+  }
+  .ms-#{$name} {
+    margin-left: $spacer;
+  }
+  .me-#{$name} {
+    margin-right: $spacer;
+  }
+  .p-#{$name} {
+    padding: $spacer;
+  }
+  .pt-#{$name} {
+    padding-top: $spacer;
+  }
+  .pb-#{$name} {
+    padding-bottom: $spacer;
+  }
+  .ps-#{$name} {
+    padding-left: $spacer;
+  }
+  .pe-#{$name} {
+    padding-right: $spacer;
+  }
+}
+
+@include pad {
+  @each $name, $spacer in $spacer-types {
+    .mt-md-#{$name} {
+      margin-top: $spacer;
+    }
+    .mb-md-#{$name} {
+      margin-bottom: $spacer;
+    }
+    .ms-md-#{$name} {
+      margin-left: $spacer;
+    }
+    .me-md-#{$name} {
+      margin-right: $spacer;
+    }
+    .pt-md-#{$name} {
+      padding-top: $spacer;
+    }
+    .pb-md-#{$name} {
+      padding-bottom: $spacer;
+    }
+    .ps-md-#{$name} {
+      padding-left: $spacer;
+    }
+    .pe-md-#{$name} {
+      padding-right: $spacer;
+    }
+  }
+}
+
+@include mobile {
+  @each $name, $spacer in $spacer-types {
+    .mt-sm-#{$name} {
+      margin-top: $spacer;
+    }
+    .mb-sm-#{$name} {
+      margin-bottom: $spacer;
+    }
+    .ms-sm-#{$name} {
+      margin-left: $spacer;
+    }
+    .me-sm-#{$name} {
+      margin-right: $spacer;
+    }
+    .pt-sm-#{$name} {
+      padding-top: $spacer;
+    }
+    .pb-sm-#{$name} {
+      padding-bottom: $spacer;
+    }
+    .ps-sm-#{$name} {
+      padding-left: $spacer;
+    }
+    .pe-sm-#{$name} {
+      padding-right: $spacer;
+    }
+  }
+}
